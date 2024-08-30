@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: rgb(251, 251, 251);
+}
+/* //////////// NAVBAR  \\\\\\\\\\\\\\\  */
+header {
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 100px;
+  background-color: rgb(16, 16, 16);
+}
+.logo {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.logo:hover {
+  color: rgb(255, 230, 0);
+}
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+}
+.nav-bar ul li {
+  list-style: none;
+}
+.nav-bar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0px 10px;
+  border-radius: 100px;
+  transition: 0.4s ease-in-out;
+}
+.nav-bar ul li a:hover {
+  background-color: white;
+  color: black;
+}
+.search i {
+  color: white;
+  cursor: pointer;
+}
+.cart i {
+  color: white;
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
+}
+.nav-icons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+/* //////////// HERO SECTION  \\\\\\\\\\\\\\\  */
+.image {
+  height: 450px;
+  width: 650px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+.image:hover {
+  box-shadow: 0px 0px 10px grey;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  padding: 45px 35px;
+  max-width: 100vw;
+}
+.content {
+  width: 350px;
+}
+.hero-header-1 {
+  font-size: 32px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-header-2 {
+  font-size: 32px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-header-3 {
+  font-size: 52px;
+  background: -webkit-linear-gradient(#e574f1, #3d68af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-subtext {
+  font-size: 16px;
+  margin: 20px 0px 100px 0px;
+  color: rgb(75, 75, 75);
+  padding-left: 1px;
+}
+.btn {
+  padding: 12px 25px;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 550px;
+  cursor: pointer;
+  border: none;
+}
+.buy-btn {
+  background-color: #0071e3;
+  color: white;
+  margin-left: 20px;
+}
+.learn-btn {
+  color: rgb(98, 98, 98);
+  background-color: #f1f1f1;
+}
+/* //////////// PRODUCT SECTION  \\\\\\\\\\\\\\\  */
+.products-section {
+  padding: 70px 20px;
+  background-color: black;
+}
+.products-section .prod-header {
+  text-align: center;
+  font-size: 42px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 100px;
+}
+.products-section .prod-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+.prod-card-container .prod-card {
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+  /* border: 2px solid white; */
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px black;
+}
+.prod-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.prod-card .prod-content {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(59, 59, 59, 0.233);
+  padding: 20px;
+  color: white;
+  height: 100%;
+  width: 100%;
+  transition: 1s ease;
+}
+.prod-card:hover .prod-content {
+  top: 0px;
+}
+.prod-content .prod-title {
+  font-size: 28px;
+  margin: 10px 0px 5px 0;
+  font-weight: 500;
+}
+.prod-content .prod-subtitle {
+  font-size: 12px;
+  color: rgb(160, 160, 160);
+  width: 150px;
+}
+.prod-content .prod-color {
+  margin-top: 10px;
+}
+.prod-content .prod-color-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 5px 0px 10px 0px;
+}
+.prod-content .prod-color-box .color-round {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#r1 {
+  background-color: rgb(74, 99, 223);
+}
+#r2 {
+  background-color: rgb(244, 94, 94);
+}
+#r3 {
+  background-color: rgb(255, 255, 255);
+}
+.prod-price {
+  margin: 20px 0px;
+}
+.prod-btn {
+  padding: 7px 45px;
+  font-weight: 500;
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.prod-btn:hover {
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+/* //////////// Apple Intelligence SECTION  \\\\\\\\\\\\\\\  */
+.sound-section {
+  max-width: 100vw;
+  padding: 100px 50px;
+  text-align: center;
+}
+.sound-section .sound-header-box .sound-title {
+  font-size: 52px;
+  background: -webkit-linear-gradient(#13a1ff, #d064f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sound-section .sound-header-box .sound-subtitle {
+  margin-top: 17px;
+  font-weight: 500;
+}
+.sound-section .sound-header-box .sound-subtext {
+  margin-top: 24px;
+  font-weight: 400;
+  color: grey;
+}
+.sound-section .sound-card-1 {
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid red;
+}
+.sound-card-1 .pods-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  min-height: 950px;
+  min-width: 95vw;
+}
+.right-pod,
+.left-pod {
+  height: 808px;
+  width: 319px;
+}
+.right-pod {
+  position: absolute;
+  right: 58px;
+  top: 365px;
+}
+.right-pod img,
+.left-pod img {
+  height: 100%;
+  width: 100%;
+}
+/* //////////// MAC SECTION  \\\\\\\\\\\\\\\  */
+.mac-section {
+  padding: 100px 70px;
+  max-width: 100vw;
+}
+.mac-section .mac-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.mac-header-1 {
+  max-width: 455.2px;
+  font-size: 47px;
+  font-weight: 500;
+}
+.mac-section .shop-mac {
+  text-decoration: none;
+  color: #0071e3;
+}
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.card-container .mac-card {
+  max-width: 344px;
+  max-height: 294px;
+  border-radius: 20px;
+  padding: 20px;
+  /* border: 2px solid red; */
+  background-color: white;
+  box-shadow: 0px 0px 10px rgb(188, 187, 187);
+}
+.card-container .mac-card .image-icon i {
+  font-size: 35px;
+}
+.card-container .mac-card .content {
+  width: 300px;
+}
+.card-container .mac-card .content h4 {
+  font-size: 22px;
+  width: 240px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+.card-container .mac-card .green {
+  color: #68cc45;
+}
+.card-container .mac-card .blue {
+  color: #007aff;
+}
+.card-container .mac-card .orange {
+  color: rgb(117, 56, 179);
+}
+
+.card-container .mac-card .content p {
+  font-weight: normal;
+  color: rgb(35, 35, 35);
+  margin: 20px 0px;
+  width: 100%;
+}
+.card-container .mac-card .plus-icon {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(75, 75, 75);
+}
+/* //////////////////////  FOOTER Section   \\\\\\\\\\\\\\\\\\\\\\\\  */
+.footer-section {
+  width: 100vw;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+.footer-content ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-content ul li h4 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #000000ba;
+}
+.footer-content ul li p {
+  font-size: 14px;
+  color: #0000008f;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  flex-wrap: nowrap;
+}
+.footer-links .footer-link-container-out .footer-link-container-in h4 {
+  font-weight: 500;
+  color: rgb(97, 97, 97);
+  margin-bottom: 10px;
+  font-size: 16px;
+
+}
+.footer-links .footer-link-container-out .footer-link-container-in ul li {
+  list-style: none;
+  color: rgb(97, 97, 97);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.footer-links .footer-link-container-out .footer-link-container-in ul li:hover {
+  text-decoration: underline;
+}
+
+.copyright-section{
+  background-color: black;
+  color:rgb(215, 215, 215);
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+}
+.copyright-section .copyright-div-2{
+  margin-top: 20px 
+}
+.copyright-section .copyright-div-2 a{
+  text-decoration: none;
+  color: #a4a4a4;
+  padding: 0px 20px;
+  border-right: 2px solid #a4a4a4;
+}
+.copyright-section .copyright-div-2 a:nth-last-child(){
+  border-right: none;
+
+}
+/* //////////// RESPONSIVE  \\\\\\\\\\\\\\\  */
+@media only screen and (max-width: 1090px) {
+  header {
+    padding: 0px 50px;
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .nav-bar.active {
+    height: 100vh;
+    opacity: 1;
+  }
+  .nav-bar {
+    background-color: rgb(32, 32, 32);
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    height: 0vh;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+  }
+  .nav-bar ul {
+    display: block;
+  }
+  .nav-bar ul li {
+    width: fit-content;
+    margin: 30px 0px;
+  }
+  .nav-bar ul li a {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  /*       *******************herosection****************       */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  .image {
+    width: 100%;
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-header-3 {
+    font-size: 72px;
+    width: 100%;
+  }
+  /*       *******************  MAC-Section ****************       */
+  .mac-section {
+    padding: 100px 20px;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .mac-header-1 {
+    font-size: 25px;
+  }
+  .shop-mac {
+    font: 13px;
+  }
+  /*       *******************  Product-Section ****************       */
+  .prod-card-container {
+    display: flex;
+    flex-direction: column;
+  }
+  /* *******************  Footer-content ****************** */
+  .footer-content ul li p{
+    font-size: 14px;
+  }
+  .footer-section .footer-links{
+    display: none;
+  }
+  
+
+   /*       *******************  Copyright-section ****************       */
+  .copyright-section .copyright-div-2 a{
+    font-size: 10px;
+  }
+  .copyright-div-1 p{
+    font-size: 14px;
+  }
+}
